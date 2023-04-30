@@ -68,6 +68,9 @@ source $VIMRUNTIME/menu.vim
 " Turn on the Wild menu
 set wildmenu
 
+" Turn on hybrid line numbers
+set number relativenumber
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
@@ -192,7 +195,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+set nowrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -219,6 +222,10 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Split right/below
+set splitright
+set splitbelow
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
